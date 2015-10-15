@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<root>
+  <list>
+   <!-- 日本語キーボートの場合はBRACKET_LIGHT => JIS_BRACKET_LIGHT -->
+    <!-- マウスの進む・戻るボタン -->
+    <item>
+      <name>Logicool MouseButton 4 and 5</name>
+      <identifier>private.remap.mouse_button4_5</identifier>
+      <autogen>
+        --PointingButtonToKey-- PointingButton::BUTTON4,
+        KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L
+      </autogen>
+      <autogen>
+        --PointingButtonToKey-- PointingButton::BUTTON5,
+        KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L
+      </autogen>
+    </item>
+
+    <!-- control * 2 to ClipMenu起動 -->
+    <item>
+      <name>control2 to Option+z(ClipMenu)</name>
+      <identifier>private.remap.control2.option_z</identifier>
+      <autogen>
+        __DoublePressModifier__
+        KeyCode::CONTROL_L, KeyCode::CONTROL_L,
+        KeyCode::Z, ModifierFlag::CONTROL_L
+      </autogen>
+    </item>
+
+    <!-- option + tab で ウィンド切り替え (windows互換)-->
+    <item>
+      <name>option+tab to command+tab (for windows)</name>
+      <identifier>private.remap.option_tab.command_tab</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::TAB, ModifierFlag::OPTION_L,
+        KeyCode::TAB, ModifierFlag::COMMAND_L
+      </autogen>
+      <autogen>
+        __KeyToKey__
+        KeyCode::TAB, ModifierFlag::OPTION_L, ModifierFlag::SHIFT_L,
+        KeyCode::TAB, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L
+      </autogen>
+    </item>
+
+    <!-- control + k でESC -->
+    <item>
+      <name>control+k to ESC</name>
+      <identifier>private.remap.control_k.esc</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::K, ModifierFlag::CONTROL_L,
+        KeyCode::ESCAPE
+      </autogen>
+    </item>
+
+    <!-- Shift + fn + backslash で擬似INSERT (windows互換)-->
+    <item>
+      <name>Shift+Fn+backslash to command+v(for windows)</name>
+      <identifier>private.remap.shift_fn_backslash.command_v</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::HELP,
+        KeyCode::V, ModifierFlag::COMMAND_L,
+      </autogen>
+    </item>
+
+    <!-- delete(FORWARD_DELETE) を DELET(BACKESPACE) に変更 -->
+    <item>
+      <name>Fn+Backspace(FORWARD_DELETE) to Backspace(BACKESPACE)</name>
+      <identifier>private.remap.forward_delete.backspace</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::KEYPAD_CLEAR,
+        KeyCode::DELETE
+      </autogen>
+    </item>
+
+    <!-- delete(BACKESPACE) を DELET(FORWARD_DELETE) に変更 -->
+    <item>
+      <name>Backspace(BACKESPACE) to Delete(FORWARD_DELETE)</name>
+      <identifier>private.remap.backspace.forward_delete</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::DELETE,
+        KeyCode::FORWARD_DELETE
+      </autogen>
+    </item>
+
+    <!-- control + h で(FORWARD_DELETE) -->
+    <item>
+      <name>control+h to FORWARD_DELETE</name>
+      <identifier>private.remap.control_h.forward_delete</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::H, ModifierFlag::CONTROL_L,
+        KeyCode::DELETE
+      </autogen>
+    </item>
+
+    <!-- control + m でENTER -->
+    <item>
+      <name>control+m to Enter</name>
+      <identifier>private.remap.control_m.enter</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::M, ModifierFlag::CONTROL_L,
+        KeyCode::ENTER
+      </autogen>
+    </item>
+
+    <!-- 入力補助 -->
+    <!-- option + -  to -> -->
+    <!-- option + =  to => -->
+    <item>
+      <name>option -= to -> =></name>
+      <identifier>private.remap.option-=.option->=></identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::MINUS, ModifierFlag::OPTION_L,
+        KeyCode::MINUS, KeyCode::DOT, ModifierFlag::SHIFT_R
+      </autogen>
+      <autogen>
+        __KeyToKey__
+        KeyCode::EQUAL, ModifierFlag::OPTION_L,
+        KeyCode::EQUAL, KeyCode::DOT, ModifierFlag::SHIFT_R
+      </autogen>
+    </item>
+
+    <!-- control + w でvim的に移動 -->
+    <!--
+  <item>
+    <name>control+w to option+cursor_right</name>
+    <identifier>private.oprion_cursor_right.control_w</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::W, ModifierFlag::CONTROL_L,
+      KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L
+    </autogen>
+  </item>
+  -->
+
+  <!-- control + q でvim的に移動 -->
+  <!--
+  <item>
+    <name>control+q to option+cursor_left</name>
+    <identifier>private.oprion_cursor_left.control_q</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::Q, ModifierFlag::CONTROL_L,
+      KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L
+    </autogen>
+    </item>
+-->
+
+  </list>
+</root>
