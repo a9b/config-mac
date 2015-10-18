@@ -127,6 +127,17 @@
       </autogen>
     </item>
 
+    <!-- for Bluetooth KeyBoard RIGHT_altをFN に変更 -->
+    <item>
+      <name>RIGHT_alt to FN</name>
+      <identifier>private.remap.right_alt.fn</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::OPTION_R,
+        KeyCode::FN
+      </autogen>
+    </item>
+
     <!-- control + w でvim的に移動 -->
     <!--
   <item>
